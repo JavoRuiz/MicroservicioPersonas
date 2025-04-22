@@ -88,7 +88,7 @@ public class PersonaService {
 		}
 	}
 	
-	public ResponseEntity<Personas> getPersona(String curp){
+	public ResponseEntity<Persona> getPersona(String curp){
 		Persona persona = dao.findById(curp).orElse(null);
 		if(persona == null) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
